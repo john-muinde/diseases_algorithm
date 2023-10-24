@@ -1,20 +1,18 @@
-from fuzzywuzzy import fuzz
-from fuzzywuzzy import process
+from thefuzz import process
 
 def extract_symptoms(text, symptoms):
     text = text.lower()
     words = text.split()
-    extracted_symptoms = []
+    extracted_symptoms = {}
 
-    # Iterate over the symptoms
     for symptom in symptoms:
         symptom = symptom.lower()
         for word in words:
-            # Use fuzzy matching to find the best match for the symptom in the text
             match = process.extractOne(symptom, [word])
-            if match and match[1] > 80:  # If the match score is above 80, consider it a match
-                extracted_symptoms.append(symptom)
-    return list(set(extracted_symptoms))
+            if match and match[1] > 80:
+                extracted_symptoms[symptom] = match[1]
+    return extracted_symptoms
+
 
 # List of symptoms
 symptoms = [
