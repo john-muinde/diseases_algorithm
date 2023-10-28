@@ -172,4 +172,4 @@ symptoms = [
     "stomach bloating",
 ]
 
-print(extract_symptoms("I have a stomachache", symptoms))
+print(extract_symptoms("I have a stomachache and a strong headache and nausea", symptoms))
