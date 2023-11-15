@@ -9,7 +9,7 @@ function extractSymptoms(text, symptoms) {
     symptom = symptom.toLowerCase();
     for (let word of words) {
       const match = stringSimilarity.findBestMatch(symptom, [word]);
-      if (match.bestMatch.rating >= 0.1) {
+      if (match.bestMatch.rating >= 0.8) {
         extractedSymptoms[symptom] = match.bestMatch.rating;
       }
     }
