@@ -1,0 +1,22 @@
+{
+  "name": "symptoms-algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-muinde/diseases_algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-muinde/diseases_algorithm/issues"
+  },
+  "homepage": "https://github.com/john-muinde/diseases_algorithm#readme",
+  "dependencies": {
+    "string-similarity": "^4.0.4"
+  }
+}
